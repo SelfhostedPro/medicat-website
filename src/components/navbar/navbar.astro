@@ -1,47 +1,67 @@
 ---
-import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
+import Container from "@components/ui/container.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "@astrojs/image/components";
+import siteIcon from "assets/media/site_icon.png";
+import { Icon } from "astro-icon";
+
+
 
 const menuitems = [
+  // {
+  //   title: "Features",
+  //   path: "#",
+  //   children: [
+  //     { title: "Action", path: "/" },
+  //     { title: "Another action", path: "#" },
+  //     { title: "Dropdown Submenu", path: "#" },
+  //     { title: "404 Page", path: "/404" },
+  //   ],
+  // },
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+    title: "Home",
+    path: "/",
+    icon: "ic:sharp-home"
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Team",
+    path: "/#team",
+    icon: "mdi:cat"
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Download",
+    path: "/#downloads",
+    icon: "ic:baseline-cloud-download"
   },
   {
-    title: "Blog",
-    path: "/blog",
+    title: "Docs",
+    path: "/docs",
+    icon: "ic:baseline-book"
   },
   {
-    title: "Contact",
-    path: "/contact",
+    title: "Discord",
+    path: "https://discord.gg/medicat",
+    icon: "ic:baseline-discord"
   },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center mx-auto max-w-[90%] my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+        <a href="/">
+          <Picture
+            src={siteIcon}
+            alt="Medicat USB"
+            widths={[100, 200, 300]}
+            aspectRatio="1/1"
+            sizes="(max-width: 50px) 100vw, 50px"
+            loading="eager"
+            format="avif"
+            class="hover:animate-wiggle"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -64,7 +84,10 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                      class="flex gap-2 py-2 text-gray-600 hover:text-gray-900">
+                      {item.icon && (
+                      <Icon class="w-6 h-6" name={item.icon} />
+                    )}
                       {item.title}
                     </a>
                   </li>
@@ -73,17 +96,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
   </header>
 </Container>

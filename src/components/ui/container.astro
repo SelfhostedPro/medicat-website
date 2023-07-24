@@ -1,0 +1,8 @@
+---
+const { class: className, bgstyle: bgstyle, bgclass: bgclass, id: id } = Astro.props;
+---
+<div id={id} style={bgstyle} class:list={[bgclass]} >
+  <div class:list={["container", className]}>
+    <slot />
+  </div>
+</div>

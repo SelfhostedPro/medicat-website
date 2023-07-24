@@ -4,6 +4,12 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource/inter/variable.css";
 
+import BGC from "assets/bgc.png"
+import DiscordPeek from "assets/discord-peek.png"
+
+import { Picture } from "@astrojs/image/components";
+
+
 export interface Props {
   title: string;
 }
@@ -11,44 +17,37 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/opengraph.png",
   Astro.site
 ).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" sizes="192x192" href="/favicon.png" />
+    <link rel="icon" sizes="32x32" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
-      title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      title={title}
+      description="A toolkit that helps compile a selection of the latest computer diagnostic and recovery tools."
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Medicat - Computer Diagnostic and Recovery Toolkit`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Medicat Homepage Screenshot",
         },
       }}
     />
@@ -57,6 +56,28 @@ const makeTitle = title
     <Navbar />
     <slot />
     <Footer />
+    <a href="https://url.medicatusb.com/jayroshop"
+    target="_blank">
+      <Picture 
+      src={BGC} 
+      widths={[100]}
+      alt="Jayro Shop"
+      class="left-0 bottom-0 fixed z-0 w-32 hover:animate-bob"
+      loading="eager"
+      format="avif"
+      />
+    </a>
+    <a href="https://discord.gg/medicat"
+    target="_blank">
+      <Picture 
+      src={DiscordPeek} 
+      widths={[300]}
+      alt="Join the Discord"
+      class="right-0 bottom-0 fixed z-0 w-48 hover:animate-bob-reverse"
+      loading="eager"
+      format="avif"
+      />
+    </a> 
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

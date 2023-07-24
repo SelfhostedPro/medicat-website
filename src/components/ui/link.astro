@@ -1,9 +1,10 @@
 ---
 interface Props {
   href: string;
-  size?: "md" | "lg";
+  size?: "md" | "lg" | "xl";
+  bg?: "warning" | "normal";
   block?: boolean;
-  style?: "outline" | "primary" | "inverted" | "muted";
+  style?: "outline" | "primary" | "inverted" | "muted" | "glow";
   class?: string;
   [x: string]: any;
 }
@@ -13,20 +14,28 @@ const {
   block,
   size = "lg",
   style = "primary",
+  bg = "normal",
   class: className,
   ...rest
 } = Astro.props;
 
 const sizes = {
+  xl: "px-6 py-4",
   lg: "px-5 py-2.5",
   md: "px-4 py-2",
 };
 
+const background = {
+  warning: "bg-red-900 text-black",
+  normal: "bg-white text-black",
+};
+
 const styles = {
-  outline: "bg-white border-2 border-black hover:bg-gray-100 text-black ",
-  primary: "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
-  inverted: "bg-white text-black   border-2 border-transparent",
-  muted: "bg-gray-100 hover:bg-gray-200   border-2 border-transparent",
+  outline: "border-2 border-black hover:bg-gray-100 text-black ",
+  primary: "border-2 border-transparent",
+  inverted: "border-2 border-transparent",
+  muted: "border-2 border-transparent",
+  glow: "button-glow font-semibold"
 };
 ---
 
@@ -36,9 +45,43 @@ const styles = {
   class:list={[
     "rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
     block && "w-full",
+    background[bg],
     sizes[size],
     styles[style],
     className,
   ]}
   ><slot />
 </a>
+
+<style>
+  .button-glow{
+  position: relative;
+  z-index: 0;
+  }
+  .button-glow:before{
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: 600%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  animation: glowing 20s linear infinite;
+  backdrop-filter: blur(10px);
+  filter: blur(2px);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 0.25rem;
+  }
+  .button-glow:hover:before {
+  opacity: 1;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0%; }
+    100% { background-position: 0 0; }
+  }
+  </style>

@@ -1,0 +1,30 @@
+---
+interface Props {
+        topic: string;
+        subtopics: any;
+        class?: string;
+}
+const { topic: topic, subtopics: subtopics, class: className } = Astro.props;
+---
+        <div class:list={['mx-auto', className]}>
+            <div class="flex justify-around items-center">
+                <h2 class="capitalize text-slate-200 text-4xl lg:text-5xl mb-5 font-bold lg:tracking-tight" >{topic}</h2>    
+            </div>
+            <div>
+                <ul>
+                    {Array.isArray(subtopics) && subtopics.map((title) => (
+                        <li class="font-semibold text-slate-200 text-2xl">{title}</li>
+                    ))}
+                    {!Array.isArray(subtopics) && Object.entries(subtopics).map(([category, entries]) => (
+                        <li class="font-semibold text-slate-200 text-2xl mb-2">{category}
+                            <ul class="ml-5 text-slate-200 text-base font-normal list-disc">
+                                {entries.map((entry) => (
+                                    <a href={'/docs/'+entry.slug}><li>{entry.data.title}</li></a>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+</div>

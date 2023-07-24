@@ -1,0 +1,73 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import Gizmo from "assets/media/Gizmo_150.png"
+import BGTile from "assets/media/bgtile_light.png"
+const bgstyle = `background-image: url(${BGTile.src})`
+
+const features = [
+  {
+    title: "Password Removal Tools",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+  },
+  {
+    title: "Ransom and Malware Recovery",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+  },
+  {
+    title: "Partitioning and Disk Utilities",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+  },
+  {
+    title: "Backup and Data Recovery",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+  },
+];
+---
+
+<div class="flex flex-col max-w-[90%] mx-auto py-5">
+  <div class="text-center py-5 px-3 bg-black/60 hover:shadow-2xl rounded">
+    <h2 class="text-slate-200 text-3xl lg:text-5xl font-bold lg:tracking-tight">
+      Everything you need at your fingertips
+    </h2>
+    <p class="text-lg mt-4 text-slate-300">
+      Medicat comes with a large collection of frameworks and tools to help you get the job done.
+    </p>
+  </div>
+  <div class="grid sm:grid-cols-1 md:grid-cols-4 py-10 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex 
+          justify-center items-center text-center
+          flex-col gap-4 items-start 
+          rounded bg-black/60 py-5 px-5 text-white
+          hover:shadow-2xl transition-shadow">
+          <div class="mt-1 w-32 h-32 shrink-0">
+            <Picture 
+            class="hover:animate-wiggle"
+            src={Gizmo}
+            widths={[150]}
+            loading="eager"
+          format="avif"
+            alt="Gizmo"
+            />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div>
+    <p class=" text-center text-3xl font-semibold text-slate-200 underline">
+      And More!
+    </p>
+  </div>
+</div>

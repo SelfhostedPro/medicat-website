@@ -3,10 +3,11 @@ draft: false
 title: "Typography Example Post"
 snippet: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat"
 publishDate: "2022-11-05 15:36"
-image: {
-  src: "https://images.unsplash.com/photo-1542393545-10f5cde2c810?&fit=crop&w=430&h=240",
-  alt: "typography"
-}
+image:
+  {
+    src: "https://images.unsplash.com/photo-1542393545-10f5cde2c810?&fit=crop&w=430&h=240",
+    alt: "typography",
+  }
 category: "Technology"
 author: "Charles North"
 tags: [mdx, astro, blog]
