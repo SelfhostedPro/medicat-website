@@ -6,23 +6,25 @@ import { Picture } from "@astrojs/image/components";
 import Gizmo from "assets/media/Gizmo_150.png";
 import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
 
-const bgLinus = `background-image: url(${sexyPapaLinus.src})`
+const bgLinus = `background-image: url(${sexyPapaLinus.src})`;
 ---
 
 <Layout title="404 Not Found">
   <Container bgclass="bg-fixed bg-cover bg-no-repeat" bgstyle={bgLinus}>
     <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
-      <div class="mt-16 text-center ring-2 ring-slate-300 shadow-2xl backdrop-blur-2xl bg-black/80 py-28 px-28 rounded">
+      <div
+        class="mt-16 text-center ring-2 ring-slate-300 shadow-2xl backdrop-blur-2xl bg-black/80 py-28 px-28 rounded"
+      >
         <div class="w-24 h-24 mx-auto mb-5 animate-wiggle">
-          <Picture 
-          src={Gizmo}
-          widths={[150]}
-          alt="Gizmo"
-          />
+          <Picture src={Gizmo} widths={[150]} alt="Gizmo" />
         </div>
-        <h1 class="text-slate-200 text-4xl lg:text-5xl font-bold lg:tracking-tight">404</h1>
+        <h1
+          class="text-slate-200 text-4xl lg:text-5xl font-bold lg:tracking-tight"
+        >
+          404
+        </h1>
         <p class="text-lg mt-4 mb-10 text-slate-300">Page not found.</p>
-        <Link href="javascript:history.back()"> Back </Link>
+        <Link href="javascript:history.back()">Back</Link>
       </div>
     </div>
   </Container>

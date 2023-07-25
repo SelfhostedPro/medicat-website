@@ -2,9 +2,9 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 import { Picture } from "@astrojs/image/components";
-import Gizmo from "assets/media/Gizmo_150.png"
-import BGTile from "assets/media/bgtile_light.png"
-const bgstyle = `background-image: url(${BGTile.src})`
+import Gizmo from "assets/media/Gizmo_150.png";
+import BGTile from "assets/media/bgtile_light.png";
+const bgstyle = `background-image: url(${BGTile.src})`;
 
 const features = [
   {
@@ -36,37 +36,42 @@ const features = [
       Everything you need at your fingertips
     </h2>
     <p class="text-lg mt-4 text-slate-300">
-      Medicat comes with a large collection of frameworks and tools to help you get the job done.
+      Medicat comes with a large collection of frameworks and tools to help you
+      get the job done.
     </p>
   </div>
   <div class="grid sm:grid-cols-1 md:grid-cols-4 py-10 gap-16">
     {
       features.map((item) => (
-        <div class="flex 
+        <div
+          class="flex 
           justify-center items-center text-center
           flex-col gap-4 items-start 
           rounded bg-black/60 py-5 px-5 text-white
-          hover:shadow-2xl transition-shadow">
+          hover:shadow-2xl transition-shadow"
+        >
           <div class="mt-1 w-32 h-32 shrink-0">
-            <Picture 
-            class="hover:animate-wiggle"
-            src={Gizmo}
-            widths={[150]}
-            loading="eager"
-          format="avif"
-            alt="Gizmo"
+            <Picture
+              class="hover:animate-wiggle"
+              src={Gizmo}
+              widths={[150]}
+              loading="eager"
+              format="avif"
+              alt="Gizmo"
             />
           </div>
           <div>
             <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              {item.description}
+            </p>
           </div>
         </div>
       ))
     }
   </div>
   <div>
-    <p class=" text-center text-3xl font-semibold text-slate-200 underline">
+    <p class="text-center text-3xl font-semibold text-slate-200 underline">
       And More!
     </p>
   </div>

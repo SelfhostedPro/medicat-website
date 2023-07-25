@@ -1,149 +1,153 @@
 ---
-import Bandit from '@assets/media/team/bandit_site.png'
-import Gizmo from '@assets/media/team/gizmo_site.png'
-import Kirk from '@assets/media/team/kirk_site.png'
-import Leo from '@assets/media/team/leo_site.png'
-import Pepe from '@assets/media/team/Pepe_site-1.png'
+import Bandit from "@assets/media/team/bandit_site.png";
+import Gizmo from "@assets/media/team/gizmo_site.png";
+import Kirk from "@assets/media/team/kirk_site.png";
+import Leo from "@assets/media/team/leo_site.png";
+import Pepe from "@assets/media/team/Pepe_site-1.png";
 
-import Matt from '@assets/media/team/matt.png'
-import Jayro from '@assets/media/team/jayro.png'
+import Matt from "@assets/media/team/matt.png";
+import Jayro from "@assets/media/team/jayro.png";
 
 import { Picture } from "@astrojs/image/components";
-
 ---
-<div class="max-w-6xl mx-auto bg-black/75 rounded shadow-2xl px-8 pt-3 pb-10 divide-y-4">
-    <div class="text-center py-5">
-        <h2 class="text-slate-200 text-4xl lg:text-5xl font-bold lg:tracking-tight">
-          Team - ᓚᘏᗢ
+
+<div
+  class="max-w-6xl mx-auto bg-black/75 rounded shadow-2xl px-8 pt-3 pb-10 divide-y-4"
+>
+  <div class="text-center py-5">
+    <h2 class="text-slate-200 text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Team - ᓚᘏᗢ
+    </h2>
+    <p class="text-lg mt-4 text-slate-300">Meet the team behind Medicat</p>
+  </div>
+  <div class="flex flex-wrap gap-5 py-5">
+    <div class="w-48 flex-auto">
+      <a href="https://www.youtube.com/watch?v=M3tIYdMR_Ao" target="_blank">
+        <Picture
+          class="rounded"
+          src={Kirk}
+          widths={[100, 210]}
+          alt="Kirk"
+          loading="eager"
+          format="avif"
+        />
+        <h2
+          class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+        >
+          Kirk
         </h2>
-        <p class="text-lg mt-4 text-slate-300">
-          Meet the team behind Medicat
+        <p class="text-center text-slate-300">-Matt</p>
+      </a>
+    </div>
+    <div class="w-48 flex-auto">
+      <Picture
+        class="rounded"
+        src={Bandit}
+        widths={[100, 210]}
+        alt="Bandit"
+        loading="eager"
+        format="avif"
+      />
+      <h2
+        class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+      >
+        Bandit
+      </h2>
+      <p class="text-center text-slate-300">-Matt</p>
+    </div>
+    <div class="w-48 flex-auto">
+      <a href="https://www.youtube.com/watch?v=HeZpkv62L5g" target="_blank">
+        <Picture
+          class="rounded"
+          src={Pepe}
+          widths={[100, 210]}
+          alt="Pepe"
+          loading="eager"
+          format="avif"
+        />
+        <h2
+          class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+        >
+          Pepe
+        </h2>
+        <p class="text-center text-slate-300">-Jayro</p>
+      </a>
+    </div>
+    <div class="w-48 flex-auto">
+      <Picture
+        class="rounded"
+        src={Leo}
+        widths={[100, 210]}
+        alt="leo"
+        loading="eager"
+        format="avif"
+      />
+      <h2
+        class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+      >
+        Leo
+      </h2>
+      <p class="text-center text-slate-300">-Jayro</p>
+    </div>
+    <div class="w-48 flex-auto">
+      <Picture
+        class="rounded"
+        src={Gizmo}
+        widths={[100, 210]}
+        alt="Gizmo"
+        loading="eager"
+        format="avif"
+      />
+      <h2
+        class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+      >
+        Gizmo
+      </h2>
+      <p class="text-center text-slate-300">-Jayro</p>
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-around items-center pt-5 gap-4">
+    <div class="w-60">
+      <a href="https://mon5termatt.com" target="_blank">
+        <Picture
+          class="rounded"
+          src={Matt}
+          widths={[100, 210]}
+          alt="MON5TERMATT"
+          loading="eager"
+          format="avif"
+        />
+        <h2
+          class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+        >
+          MON5TERMATT
+        </h2>
+        <p class="text-center text-slate-300">
+          Site Designer and Developer <br />
+           Giant Homelab Nerd
         </p>
+      </a>
     </div>
-    <div class="flex flex-wrap gap-5 py-5">
-        <div class="w-48 flex-auto">
-            <a href="https://www.youtube.com/watch?v=M3tIYdMR_Ao" target="_blank">
-                <Picture 
-                class="rounded"
-                src={Kirk}
-                widths={[100, 210]}
-                alt="Kirk"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Kirk
-                </h2>
-                <p class="text-center text-slate-300">
-                    -Matt
-                </p>
-            </a>    
-        </div>
-        <div class="w-48 flex-auto">
-            <Picture
-                class="rounded"
-                src={Bandit}
-                widths={[100, 210]}
-                alt="Bandit"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Bandit
-                </h2>
-                <p class="text-center text-slate-300">
-                    -Matt
-                </p>
-        </div>
-        <div class="w-48 flex-auto">
-            <a href="https://www.youtube.com/watch?v=HeZpkv62L5g" target="_blank">
-            <Picture
-                class="rounded"
-                src={Pepe}
-                widths={[100, 210]}
-                alt="Pepe"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Pepe
-                </h2>
-                <p class="text-center text-slate-300">
-                    -Jayro
-                </p>
-            </a>
-        </div>
-        <div class="w-48 flex-auto">
-            <Picture
-                class="rounded"
-                src={Leo}
-                widths={[100, 210]}
-                alt="leo"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Leo
-                </h2>
-                <p class="text-center text-slate-300">
-                    -Jayro
-                </p>
-        </div>
-        <div class="w-48 flex-auto">
-            <Picture
-                class="rounded"
-                src={Gizmo}
-                widths={[100, 210]}
-                alt="Gizmo"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Gizmo
-                </h2>
-                <p class="text-center text-slate-300">
-                    -Jayro
-                </p>
-        </div>
+    <div class="w-60">
+      <a href="https://ko-fi.com/jayrojones" target="_blank">
+        <Picture
+          class="rounded"
+          src={Jayro}
+          widths={[100, 210]}
+          alt="Jayro"
+          loading="eager"
+          format="avif"
+        />
+        <h2
+          class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight"
+        >
+          Jayro
+        </h2>
+        <p class="text-center text-slate-300">
+          Medicat Owner and Designer <br />
+           Gameboy Modder
+        </p>
+      </a>
     </div>
-    <div class="flex flex-wrap justify-around items-center pt-5 gap-4">
-        <div class="w-60">
-            <a href="https://mon5termatt.com" target="_blank">
-            <Picture
-                class="rounded"
-                src={Matt}
-                widths={[100, 210]}
-                alt="MON5TERMATT"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    MON5TERMATT
-                </h2>
-                <p class="text-center text-slate-300">
-                    Site Designer and Developer <br />
-                    Giant Homelab Nerd
-                </p>
-            </a>
-        </div>
-        <div class="w-60">
-            <a href="https://ko-fi.com/jayrojones" target="_blank">
-            <Picture
-                class="rounded"
-                src={Jayro}
-                widths={[100, 210]}
-                alt="Jayro"
-                loading="eager"
-                format="avif"
-                />
-                <h2 class="mt-2 text-center text-blue-600 text-2xl lg:text-3xl font-bold lg:tracking-tight">
-                    Jayro
-                </h2>
-                <p class="text-center text-slate-300">
-                    Medicat Owner and Designer <br />
-                    Gameboy Modder
-                </p>
-            </a>
-        </div>
-    </div>
+  </div>
 </div>

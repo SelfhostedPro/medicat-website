@@ -23,6 +23,6 @@
         "pages/*"
       ]
     },
-    "jsx": "preserve",
+    "jsx": "preserve"
   }
 }

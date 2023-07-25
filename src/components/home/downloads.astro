@@ -1,79 +1,83 @@
 ---
 import Link from "@components/ui/link.astro";
 import Icon from "astro-icon";
-import Tabs from '@components/home/downloadTabs.svelte'
+import Tabs from "@components/home/downloadTabs.svelte";
 ---
-<div class="flex flex-col justify-center gap-4 max-w-[70%] mx-auto py-5">
-    <div class="text-center py-5 px-3 bg-black/60 shadow-2xl rounded">
-        <h2 class="text-slate-200 text-3xl lg:text-5xl font-bold lg:tracking-tight">
-          Downloads
-        </h2>
-        <p class="text-lg mt-4 text-slate-300">
-          Please consider using mirrors and torrent files as it saves us bandwidth and costs.
-        </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="col-span-2">
-            <Link
-            href="https://github.com/mon5termatt/medicat_installer/releases"
-            style="glow"
-            target="_blank"
-            class="flex gap-1 items-center justify-center"
-            size="xl"
-            rel="noopener">
-            <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
-      
-                Medicat Automatic Installer
-            </Link>
-        </div>
-        <div>
-            <Link
-            href="https://github.com/mon5termatt/medicat_installer/raw/main/download/MediCat_USB_v21.12.torrent"
-            style="glow"
-            target="_blank"
-            class="flex gap-1 items-center justify-center"
-            size="xl"
-            rel="noopener">
-            <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
 
-                Torrent
-            </Link>
-        </div>
-        <div>
-            <Link
-            href="magnet:?xt=urn:btih:1D714BDF37890669E98933B724B55D47E7F2D01B"
-            style="glow"
-            target="_blank"
-            class="flex gap-1 items-center justify-center"
-            size="xl"
-            rel="noopener">
-            <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
-      
-                Magnet
-            </Link>
-        </div>
-        <div class="col-span-2">
-            <Link
-            href="https://url.medicatusb.com/filecdn"
-            style="glow"
-            target="_blank"
-            class="flex gap-1 items-center justify-center bg-red-900"
-            size="lg"
-            bg="warning"
-            rel="noopener">
-            <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
-      
-                Direct Download
-            </Link>
-        </div>
-      </div>
-      <div class="text-center py-5 px-3 bg-black/60 shadow-2xl rounded">
-        <h2 class="text-slate-200 text-3xl lg:text-5xl font-bold lg:tracking-tight">
-            Alternative Downloads
-          </h2>
-          <p class="text-lg mt-4 text-slate-300">
-            Community maintained downloads
-          </p>
-      </div>
-      <Tabs client:load />
+<div class="flex flex-col justify-center gap-4 max-w-[70%] mx-auto py-5">
+  <div class="text-center py-5 px-3 bg-black/60 shadow-2xl rounded">
+    <h2 class="text-slate-200 text-3xl lg:text-5xl font-bold lg:tracking-tight">
+      Downloads
+    </h2>
+    <p class="text-lg mt-4 text-slate-300">
+      Please consider using mirrors and torrent files as it saves us bandwidth
+      and costs.
+    </p>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="col-span-2">
+      <Link
+        href="https://github.com/mon5termatt/medicat_installer/releases"
+        style="glow"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        size="xl"
+        rel="noopener"
+      >
+        <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
+
+         Medicat Automatic Installer
+      </Link>
+    </div>
+    <div>
+      <Link
+        href="https://github.com/mon5termatt/medicat_installer/raw/main/download/MediCat_USB_v21.12.torrent"
+        style="glow"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        size="xl"
+        rel="noopener"
+      >
+        <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
+
+         Torrent
+      </Link>
+    </div>
+    <div>
+      <Link
+        href="magnet:?xt=urn:btih:1D714BDF37890669E98933B724B55D47E7F2D01B"
+        style="glow"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        size="xl"
+        rel="noopener"
+      >
+        <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
+
+         Magnet
+      </Link>
+    </div>
+    <div class="col-span-2">
+      <Link
+        href="https://url.medicatusb.com/filecdn"
+        style="glow"
+        target="_blank"
+        class="flex gap-1 items-center justify-center bg-red-900"
+        size="lg"
+        bg="warning"
+        rel="noopener"
+      >
+        <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
+
+         Direct Download
+      </Link>
+    </div>
+  </div>
+  <div class="text-center py-5 px-3 bg-black/60 shadow-2xl rounded">
+    <h2 class="text-slate-200 text-3xl lg:text-5xl font-bold lg:tracking-tight">
+      Alternative Downloads
+    </h2>
+    <p class="text-lg mt-4 text-slate-300">Community maintained downloads</p>
+  </div>
+  <Tabs client:load />
 </div>

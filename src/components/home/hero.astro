@@ -5,28 +5,30 @@ import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
-<main class="flex flex-col gap-4 justify-center bg-black/75 rounded shadow-2xl py-6 px-6 mx-auto max-w-6xl">
+
+<main
+  class="flex flex-col gap-4 justify-center bg-black/75 rounded shadow-2xl py-6 px-6 mx-auto max-w-6xl"
+>
   <div>
-      <Picture
-        class="mx-auto"
-        src={heroImage}
-        alt="Medicat USB"
-        widths={[200, 400, 600]}
-        aspectRatio="16/9"
-        sizes="(max-width: 300px) 100vw, 300px"
-        loading="eager"
-        format="avif"
-        position="center"
-      />
-      </div>
+    <Picture
+      class="mx-auto"
+      src={heroImage}
+      alt="Medicat USB"
+      widths={[200, 400, 600]}
+      aspectRatio="16/9"
+      sizes="(max-width: 300px) 100vw, 300px"
+      loading="eager"
+      format="avif"
+      position="center"
+    />
+  </div>
   <div class="text-center">
-    <h1
-      class="text-slate-200 text-5xl lg:text-6xl xl:text-7xl font-bold">
+    <h1 class="text-slate-200 text-5xl lg:text-6xl xl:text-7xl font-bold">
       MEDICAT USB
     </h1>
-    <h6 class="text-lg my-4 text-slate-300  max-w-xl mx-auto">
-      Medicat is a toolkit that helps compile a selection of the latest computer diagnostic and
-      recovery tools into an easy to use toolkit.
+    <h6 class="text-lg my-4 text-slate-300 max-w-xl mx-auto">
+      Medicat is a toolkit that helps compile a selection of the latest computer
+      diagnostic and recovery tools into an easy to use toolkit.
     </h6>
   </div>
   <div class="flex flex-col sm:flex-row justify-center pb-5 gap-3 mx-auto">
@@ -34,10 +36,11 @@ import { Icon } from "astro-icon";
       href="#downloads"
       style="glow"
       class="flex gap-1 items-center justify-center"
-      rel="noopener">
+      rel="noopener"
+    >
       <Icon class="text-black w-5 h-5" name="bx:bxs-cloud-download" />
 
-      Download
+       Download
     </Link>
     <Link
       href="https://gbatemp.net/threads/medicat-usb-a-multiboot-linux-usb-for-pc-repair.361577/"
@@ -47,7 +50,7 @@ import { Icon } from "astro-icon";
       rel="noopener"
     >
       <Icon class="text-black w-5 h-5" name="pixelarticons:article" />
-      GBATEMP POST
+       GBATEMP POST
     </Link>
     <Link
       size="lg"
@@ -55,20 +58,23 @@ import { Icon } from "astro-icon";
       rel="noopener"
       href="https://github.com/mon5termatt/medicat_installer"
       class="flex gap-1 items-center justify-center"
-      target="_blank">
+      target="_blank"
+    >
       <Icon class="text-black w-5 h-5" name="bx:bxl-github" />
-      GitHub
+       GitHub
     </Link>
   </div>
-</div>
-  </div>
-  <div class="bg-red-100 border border-red-400 text-red-700 text-center px-3 py-3 rounded relative mx-auto max-w-4xl" role="alert">
-    <strong class="font-bold">We hate ads!</strong>
-    <br/>
-    <span class="block sm:inline">
-      However, this is the only way I can pay for the hosting. 
-      That being said, please feel free to use an ad blocker. 
-      This site doesn't have anything that will prevent you from viewing this site with one. 
-    </span>
-  </div>
 </main>
+
+<div
+  class="bg-red-100 border border-red-400 text-red-700 text-center px-3 py-3 rounded relative mx-auto max-w-4xl"
+  role="alert"
+>
+  <strong class="font-bold">We hate ads!</strong>
+  <br />
+  <span class="block sm:inline">
+    However, this is the only way I can pay for the hosting. That being said,
+    please feel free to use an ad blocker. This site doesn't have anything that
+    will prevent you from viewing this site with one.
+  </span>
+</div>

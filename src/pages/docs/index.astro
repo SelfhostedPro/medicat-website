@@ -1,60 +1,76 @@
 ---
-import { getCollection } from 'astro:content'
-import Layout from '@layouts/Layout.astro'
-import Toc from '@components/docs/toc.astro'
-import Container from '@components/ui/container.astro'
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Toc from "@components/docs/toc.astro";
+import Container from "@components/ui/container.astro";
 
 import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
-import BGTile from "assets/media/bgtile_light.png"
+import BGTile from "assets/media/bgtile_light.png";
 
-const bgTile = `background-image: url(${BGTile.src})`
-const bgLinus = `background-image: url(${sexyPapaLinus.src})`
+const bgTile = `background-image: url(${BGTile.src})`;
+const bgLinus = `background-image: url(${sexyPapaLinus.src})`;
 
-const docs = await getCollection('docs')
-const topics = {}
+const docs = await getCollection("docs");
+const topics = {};
 
 docs.map((doc) => {
-    // Separate out the ID into subdirectories and filenames
-    let topic = doc.id.split('/')[0]
-    let topicArr = doc.id.split('/')
+  // Separate out the ID into subdirectories and filenames
+  let topic = doc.id.split("/")[0];
+  let topicArr = doc.id.split("/");
 
-    // If the topic doesn't exist, and it has subdirectories, create it
-    if (!topics[topic]) {
-        topics[topic] = {}
-    }
+  // If the topic doesn't exist, and it has subdirectories, create it
+  if (!topics[topic]) {
+    topics[topic] = {};
+  }
 
-    // If the topic has subdirectories, and the subdirectory doesn't exist, create it
-    if (!topics[topic][topicArr[1]]) {
-        topics[topic][topicArr[1]] = []
-    }
+  // If the topic has subdirectories, and the subdirectory doesn't exist, create it
+  if (!topics[topic][topicArr[1]]) {
+    topics[topic][topicArr[1]] = [];
+  }
 
-    // Else push the title to the subdirectory array
-    topics[topic][topicArr[1]].push(doc)
-})
+  // Else push the title to the subdirectory array
+  topics[topic][topicArr[1]].push(doc);
+});
 ---
-<Layout title="Medicat USB | Docs" >
-    <Container bgstyle={bgTile} class="mx-auto py-32" bgclass="bg-fixed bg-cover bg-no-repeat">
-        <main class="flex flex-col gap-4 justify-center bg-black/60 rounded shadow-2xl py-5 px-10 my-5 mx-auto max-w-6xl">
-            <div class="text-center">
-              <h1
-                class="text-slate-200 text-5xl lg:text-6xl xl:text-7xl font-bold">
-                MEDICAT USB DOCS
-              </h1>
-              <p class="text-lg my-4 text-slate-300  max-w-xl mx-auto">
-                This is a collection of documentation for Medicat USB. <wbr/> It is a work in progress, and will be updated as time goes on.
-              </p>
-            </div>
-          </div>
-          </main>
-          <div class="bg-blue-100 shadow-2xl border border-blue-400 text-blue-700 text-center px-3 py-3 my-5 rounded relative mx-auto max-w-4xl" role="alert">
-            <span class="block sm:inline">
-                If you have any questions that aren't answered here, please join the discord and ask in the appropriate channel.
-            </span>
-          </div>
-          <div class="flex gap-4">
-            {Object.entries(topics).map(([topic, subtopics]) => (
-                <Toc topic={topic} subtopics={subtopics}  class="flex-auto max-w-6xl bg-black/60 rounded shadow-2xl px-8 pt-3 pb-10"/>
-            ))}
-        </div>
-    </Container>
+
+<Layout title="Medicat USB | Docs">
+  <Container
+    bgstyle={bgTile}
+    class="mx-auto py-32"
+    bgclass="bg-fixed bg-cover bg-no-repeat"
+  >
+    <main
+      class="flex flex-col gap-4 justify-center bg-black/60 rounded shadow-2xl py-5 px-10 my-5 mx-auto max-w-6xl"
+    >
+      <div class="text-center">
+        <h1 class="text-slate-200 text-5xl lg:text-6xl xl:text-7xl font-bold">
+          MEDICAT USB DOCS
+        </h1>
+        <p class="text-lg my-4 text-slate-300 max-w-xl mx-auto">
+          This is a collection of documentation for Medicat USB. <wbr /> It is a
+          work in progress, and will be updated as time goes on.
+        </p>
+      </div>
+    </main>
+  </Container>
+  <div
+    class="bg-blue-100 shadow-2xl border border-blue-400 text-blue-700 text-center px-3 py-3 my-5 rounded relative mx-auto max-w-4xl"
+    role="alert"
+  >
+    <span class="block sm:inline">
+      If you have any questions that aren't answered here, please join the
+      discord and ask in the appropriate channel.
+    </span>
+  </div>
+  <div class="flex gap-4">
+    {
+      Object.entries(topics).map(([topic, subtopics]) => (
+        <Toc
+          topic={topic}
+          subtopics={subtopics}
+          class="flex-auto max-w-6xl bg-black/60 rounded shadow-2xl px-8 pt-3 pb-10"
+        />
+      ))
+    }
+  </div>
 </Layout>

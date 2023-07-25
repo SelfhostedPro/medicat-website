@@ -8,26 +8,48 @@ import Downloads from "@components/home/downloads.astro";
 import Team from "@components/home/team.astro";
 
 import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
-import BGTile from "assets/media/bgtile_light.png"
+import BGTile from "assets/media/bgtile_light.png";
 
-const bgLinus = `background-image: url(${sexyPapaLinus.src})`
-const bgTile = `background-image: url(${BGTile.src})`
+const bgLinus = `background-image: url(${sexyPapaLinus.src})`;
+const bgTile = `background-image: url(${BGTile.src})`;
 ---
 
 <Layout title="Medicat USB | Computer Diagnostic and Recovery Toolkit">
-  <Container bgstyle={bgLinus} class="mx-auto py-5" bgclass="bg-fixed bg-cover bg-no-repeat">
+  <Container
+    bgstyle={bgLinus}
+    class="mx-auto py-5"
+    bgclass="bg-fixed bg-cover bg-no-repeat"
+  >
     <Hero />
   </Container>
-  <Container bgstyle={bgTile} class="mx-auto py-5" bgclass="bg-fixed bg-cover bg-no-repeat">
+  <Container
+    bgstyle={bgTile}
+    class="mx-auto py-5"
+    bgclass="bg-fixed bg-cover bg-no-repeat"
+  >
     <Features />
   </Container>
-  <Container bgstyle={bgLinus} class="mx-auto py-5" bgclass="bg-fixed bg-cover bg-no-repeat">
+  <Container
+    bgstyle={bgLinus}
+    class="mx-auto py-5"
+    bgclass="bg-fixed bg-cover bg-no-repeat"
+  >
     <Demo />
   </Container>
-  <Container id="downloads" bgstyle={bgTile} class="mx-auto py-5" bgclass="bg-fixed bg-cover bg-no-repeat scroll-mt-28">
+  <Container
+    id="downloads"
+    bgstyle={bgTile}
+    class="mx-auto py-5"
+    bgclass="bg-fixed bg-cover bg-no-repeat scroll-mt-28"
+  >
     <Downloads />
   </Container>
-  <Container id="team" bgstyle={bgLinus} class="mx-auto py-5" bgclass="bg-fixed bg-cover bg-no-repeat">
+  <Container
+    id="team"
+    bgstyle={bgLinus}
+    class="mx-auto py-5"
+    bgclass="bg-fixed bg-cover bg-no-repeat"
+  >
     <Team />
   </Container>
 </Layout>

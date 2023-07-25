@@ -6,8 +6,6 @@ import { Picture } from "@astrojs/image/components";
 import siteIcon from "assets/media/site_icon.png";
 import { Icon } from "astro-icon";
 
-
-
 const menuitems = [
   // {
   //   title: "Features",
@@ -22,33 +20,35 @@ const menuitems = [
   {
     title: "Home",
     path: "/",
-    icon: "ic:sharp-home"
+    icon: "ic:sharp-home",
   },
   {
     title: "Team",
     path: "/#team",
-    icon: "mdi:cat"
+    icon: "mdi:cat",
   },
   {
     title: "Download",
     path: "/#downloads",
-    icon: "ic:baseline-cloud-download"
+    icon: "ic:baseline-cloud-download",
   },
   {
     title: "Docs",
     path: "/docs",
-    icon: "ic:baseline-book"
+    icon: "ic:baseline-book",
   },
   {
     title: "Discord",
     path: "https://discord.gg/medicat",
-    icon: "ic:baseline-discord"
+    icon: "ic:baseline-discord",
   },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center mx-auto max-w-[90%] my-5">
+  <header
+    class="flex flex-col lg:flex-row justify-between items-center mx-auto max-w-[90%] my-5"
+  >
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/">
@@ -84,10 +84,9 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex gap-2 py-2 text-gray-600 hover:text-gray-900">
-                      {item.icon && (
-                      <Icon class="w-6 h-6" name={item.icon} />
-                    )}
+                      class="flex gap-2 py-2 text-gray-600 hover:text-gray-900"
+                    >
+                      {item.icon && <Icon class="w-6 h-6" name={item.icon} />}
                       {item.title}
                     </a>
                   </li>
