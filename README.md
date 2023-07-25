@@ -1,57 +1,39 @@
-# Astroship - Astro Starter Template 🛸
+# Medicat Website
 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/surjithctly/astroship.git myProjectName
-# or
-git clone https://github.com/surjithctly/astroship.git .
+git clone https://github.com/SelfhostedPro/medicat-website.git
 ```
-
-The `.` will clone it to the current directory so make sure you are inside your project folder first.
 
 ### 2. Install Dependencies
 
 ```bash
-npm install
-# or
-yarn install
-# or (recommended)
 pnpm install
 ```
 
 ### 3. Start development Server
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or (recommended)
 pnpm dev
 ```
 
-### Preview & Build
+**It will now be available at `localhost:3000`**
 
-```bash
-npm run preview
-npm run build
-# or
-yarn preview
-yarn build
-# or (recommended)
-pnpm preview
-pnpm build
-```
+## Adding Download Sources
 
-We recommend using [pnpm](https://pnpm.io/) to save disk space on your computer.
+Download sources (under the alternative downloads section) are created from this file:
+`/assets/data/aldDownloads.json`
 
-### Other Commands
+You can copy and paste an existing one and once the site redeploys it will be updated with the new download source visible.
 
-```bash
-pnpm astro ...
-pnpm astro add
-pnpm astro --help
-```
+## Documentation
+You can add documentation at the following source:
+`/content/docs/`
+
+The website page for `localhost:3000/docs` is automatically generated based on these files. It will create a new topic if you create a new folder or subfolder and will automatically create links to those files.
+
+Please copy an existing file and then modify the metadata at the top as that's the easiest way to get started.
 
 ## Project Structure
 
@@ -78,13 +60,3 @@ Any static assets, like images, can be placed in the `public/` directory.
 ## TailwindCSS
 
 TailwindCSS is already configured in this repo, so you can start using it without any installation.
-
-## Credits
-
-[Hero Illustration](https://www.figma.com/community/file/1108400791662599811) by [Streamline](https://www.streamlinehq.com/)
-
-## 👀 Want to learn more?
-
-Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
-
-[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
