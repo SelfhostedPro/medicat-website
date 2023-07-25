@@ -20,6 +20,8 @@ pnpm dev
 
 **It will now be available at `localhost:3000`**
 
+**If deploying to a domain, please check that the [site and path are correct](https://docs.astro.build/en/guides/deploy/github/#how-to-deploy) in the astro.config.mjs!**
+
 ## Adding Download Sources
 
 Download sources (under the alternative downloads section) are created from this file:
