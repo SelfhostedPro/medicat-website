@@ -23,7 +23,7 @@ pnpm dev
 ## Adding Download Sources
 
 Download sources (under the alternative downloads section) are created from this file:
-`/assets/data/aldDownloads.json`
+`/assets/data/altDownloads.json`
 
 You can copy and paste an existing one and once the site redeploys it will be updated with the new download source visible.
 

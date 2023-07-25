@@ -8,7 +8,7 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
     site: "https://SelfhostedPro.github.io",
-    base: "/medicat-website",
+    // base: "/medicat-website",
     integrations: [
         tailwind(),
         image({
