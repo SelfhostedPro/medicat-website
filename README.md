@@ -22,6 +22,10 @@ pnpm dev
 
 **If deploying to a domain, please check that the [site and path are correct](https://docs.astro.build/en/guides/deploy/github/#how-to-deploy) in the astro.config.mjs!**
 
+You'll also need to change the domain in the following places:
+1. `astro.config.mjs`
+1. `public/robots.txt`
+
 ## Adding Download Sources
 
 Download sources (under the alternative downloads section) are created from this file:
