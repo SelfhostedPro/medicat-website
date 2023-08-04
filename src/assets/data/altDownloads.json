@@ -1,6 +1,19 @@
 {
   "Providers": [
     {
+      "name": "Direct Download Mirrors",
+      "links": [
+        {
+          "name": "Mirror 1",
+          "link": "https://files.dog/OD%20Rips/MediCat/v21.12/"
+        },
+        {
+          "name": "Mirror 2",
+          "link": "https://medicat.itrio.xyz/"
+        },
+      ]
+    },
+    {
       "name": "Google Drive",
       "links": [
         {
@@ -23,53 +36,11 @@
       ]
     },
     {
-      "name": "Zippysha.re",
-      "links": [
-        {
-          "name": "1/6",
-          "link": "https://zippysha.re/i8efj8qfz8/MediCat_USB_v21_12_zip_001"
-        },
-        {
-          "name": "2/6",
-          "link": "https://zippysha.re/d9maj8q3z5/MediCat_USB_v21_12_zip_002"
-        },
-        {
-          "name": "3/6",
-          "link": "https://zippysha.re/c2yfj2qazb/MediCat_USB_v21_12_zip_003"
-        },
-        {
-          "name": "4/6",
-          "link": "https://zippysha.re/J3H1jcq8zc/MediCat_USB_v21_12_zip_004"
-        },
-        {
-          "name": "5/6",
-          "link": "https://zippysha.re/H1d0kfq0z3/MediCat_USB_v21_12_zip_005"
-        },
-        {
-          "name": "6/6",
-          "link": "https://zippysha.re/n6hckbqez7/MediCat_USB_v21_12_zip_006"
-        }
-      ]
-    },
-    {
       "name": "OneDrive",
       "links": [
         {
           "name": "Mirror 1",
           "link": "https://qp2x-my.sharepoint.com/personal/mcbiker22_nes-interfaces_de/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmcbiker22_nes-interfaces_de%2FDocuments%2FMedicat%20USB&ga=1"
-        }
-      ]
-    },
-    {
-      "name": "Direct Download Mirrors",
-      "links": [
-        {
-          "name": "Mirror 1",
-          "link": "https://mirror.fangshdow.trade/medicat-usb/MediCat%20USB%20v21.12/"
-        },
-        {
-          "name": "Mirror 2",
-          "link": "https://medicat.itrio.xyz/"
         }
       ]
     }
