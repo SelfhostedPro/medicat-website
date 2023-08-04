@@ -6,57 +6,67 @@ import { Picture } from "@astrojs/image/components";
 import siteIcon from "assets/media/site_icon.png";
 import { Icon } from "astro-icon";
 
-const menuitems = [
-  // {
-  //   title: "Features",
-  //   path: "#",
-  //   children: [
-  //     { title: "Action", path: "/" },
-  //     { title: "Another action", path: "#" },
-  //     { title: "Dropdown Submenu", path: "#" },
-  //     { title: "404 Page", path: "/404" },
-  //   ],
-  // },
+interface MenuItemEntries {
+  title: string;
+  icon?: string;
+  path: string;
+  children?: MenuItemChild[];
+}
+interface MenuItemChild {
+  title: string;
+  path: string;
+}
+
+const menuitems: MenuItemEntries[] = [
   {
     title: "Home",
     path: "/",
-    icon: "ic:sharp-home",
+    icon: "round-home",
   },
   {
     title: "Team",
     path: "/#team",
-    icon: "mdi:cat",
+    icon: "cat",
   },
   {
     title: "Download",
     path: "/#downloads",
-    icon: "ic:baseline-cloud-download",
+    icon: "round-cloud-download",
   },
   {
     title: "Docs",
     path: "/docs",
-    icon: "ic:baseline-book",
+    icon: "baseline-book",
   },
   {
     title: "Discord",
     path: "https://discord.gg/medicat",
-    icon: "ic:baseline-discord",
+    icon: "baseline-discord",
   },
 ];
 ---
 
+<script>
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton?.addEventListener("click", (e) => {
+    [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+      e.preventDefault();
+      el.classList.toggle("hidden");
+    });
+  });
+</script>
 <Container>
   <header
     class="flex flex-col lg:flex-row justify-between items-center mx-auto max-w-[90%] my-5"
   >
-    <Astronav>
+    <Astronav client:load>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/">
           <Picture
             src={siteIcon}
             alt="Medicat USB"
             widths={[100, 200, 300]}
-            aspectRatio="1/1"
+            aspectRatio="1:1"
             sizes="(max-width: 50px) 100vw, 50px"
             loading="eager"
             format="avif"
@@ -64,10 +74,13 @@ const menuitems = [
           />
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon client:load class="w-4 h-4 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+      <MenuItems
+        client:load
+        class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0"
+      >
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
