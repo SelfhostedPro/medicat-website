@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://medicat.selfhosted.pro/sitemap-index.xml
+Sitemap: https://medicatusb.com/sitemap-index.xml
