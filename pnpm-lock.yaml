@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@astrojs/image':
     specifier: ^0.14.1
@@ -50,9 +46,6 @@ dependencies:
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
-  typography:
-    specifier: link:@tailwindcss\typography
-    version: link:@tailwindcss/typography
 
 devDependencies:
   '@tailwindcss/typography':
@@ -4993,3 +4986,7 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
