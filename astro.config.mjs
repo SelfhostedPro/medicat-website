@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://medicat.selfhosted.pro",
+    site: "https://medicatusb.com",
     // base: "/medicat-website",
     integrations: [tailwind(), image({
         serviceEntryPoint: "@astrojs/image/sharp"
