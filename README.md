@@ -12,19 +12,14 @@ git clone https://github.com/SelfhostedPro/medicat-website.git
 pnpm install
 ```
 
-### 3. Start development Server
+### 3. Build Site
 
 ```bash
-pnpm dev
+pnpm build
 ```
 
-**It will now be available at `localhost:3000`**
+### 4. Move to folder (apache2 is /var/www/html/)
 
-**If deploying to a domain, please check that the [site and path are correct](https://docs.astro.build/en/guides/deploy/github/#how-to-deploy) in the astro.config.mjs!**
-
-You'll also need to change the domain in the following places:
-1. `astro.config.mjs`
-1. `public/robots.txt`
 
 ## Adding Download Sources
 

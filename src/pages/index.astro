@@ -8,15 +8,18 @@ import Downloads from "@components/home/downloads.astro";
 import Team from "@components/home/team.astro";
 
 import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
+import BGMain from "assets/media/v12.21_background.jpg";
 import BGTile from "assets/media/bgtile_light.png";
 
+
 const bgLinus = `background-image: url(${sexyPapaLinus.src})`;
+const bgMain = `background-image: url(${v12.21_background.src})`;
 const bgTile = `background-image: url(${BGTile.src})`;
 ---
 
 <Layout title="Medicat USB | Computer Diagnostic and Recovery Toolkit">
   <Container
-    bgstyle={bgLinus}
+    bgstyle={bgMain}
     class="mx-auto py-5"
     bgclass="bg-fixed bg-cover bg-no-repeat"
   >
@@ -30,7 +33,7 @@ const bgTile = `background-image: url(${BGTile.src})`;
     <Features />
   </Container>
   <Container
-    bgstyle={bgLinus}
+    bgstyle={bgMain}
     class="mx-auto py-5"
     bgclass="bg-fixed bg-cover bg-no-repeat"
   >
@@ -46,7 +49,7 @@ const bgTile = `background-image: url(${BGTile.src})`;
   </Container>
   <Container
     id="team"
-    bgstyle={bgLinus}
+    bgstyle={bgMain}
     class="mx-auto py-5"
     bgclass="bg-fixed bg-cover bg-no-repeat"
   >
