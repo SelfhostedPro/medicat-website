@@ -13,7 +13,7 @@ Before installation, open your Antivirus and disable any Real-Time protection th
 
 # Auto Installer
 
-The recommended way of installing Medicat is to use the [Windows Auto Installer](). You simply open the batch file and follow the on screen directions to install.
+The recommended way of installing Medicat is to use the [Windows Auto Installer](https://github.com/mon5termatt/medicat_installer/releases). You simply open the batch file and follow the on screen directions to install.
 
 # Manual Install
 
