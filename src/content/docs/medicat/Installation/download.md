@@ -10,4 +10,4 @@ tags: [medicat, install, download]
 # Download
 
 1. Download Medicat from the [homepage](/)
-2. Ensure you're using a [supported drive](/docs/medicat/installation/supported-drives) in a recommended configuration.
+2. Ensure your drive meets all of the [requirements](/docs/medicat/installation/requirements)
