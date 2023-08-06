@@ -4,13 +4,12 @@ import Container from "@components/ui/container.astro";
 import Link from "@components/ui/link.astro";
 import { Picture } from "@astrojs/image/components";
 import Gizmo from "assets/media/Gizmo_150.png";
-import sexyPapaLinus from "assets/media/sexy-papa-linus.png";
-
-const bgLinus = `background-image: url(${sexyPapaLinus.src})`;
+import background from "assets/media/background.png";
+const bgmain = `background-image: url(${background.src})`;
 ---
 
 <Layout title="404 Not Found">
-  <Container bgclass="bg-fixed bg-cover bg-no-repeat" bgstyle={bgLinus}>
+  <Container bgclass="bg-fixed bg-cover bg-no-repeat" bgstyle={bgmain}>
     <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
       <div
         class="mt-16 text-center ring-2 ring-slate-300 shadow-2xl backdrop-blur-2xl bg-black/80 py-28 px-28 rounded"
